@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vmart</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'font-awesome.min.css' %}"
+    />
+    <link rel="stylesheet" type="text/css" href="{% static 'animate.css' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'owl.carousel.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'owl.theme.default.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'magnific-popup.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'templatemo-style.css' %}"
+    />
+  </head>
+  <body style="background: url(https://images.pexels.com/photos/1546901/pexels-photo-1546901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);background-size:cover;
+  color: wheat;">
+    <!-- PRE LOADER -->
+    <section class="preloader">
+      <div class="spinner">
+        <span class="spinner-rotate"></span>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="icon icon-bar"></span>
+            <span class="icon icon-bar"></span>
+            <span class="icon icon-bar"></span>
+          </button>
+
+          <!-- lOGO TEXT HERE -->
+          <a href="/" class="navbar-brand">Vmart Assignment</a>
+        </div>
+
+        <!-- MENU LINKS -->
+        <div class="collapse navbar-collapse">
+         <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+            <a href="/logout/" class="section-btn">Logout</a
+            >{% else %}
+            <a href="login" class="section-btn">LOGIN / REGISTER</a>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  <section>
+    <div class="container d-flex text-center">
+      <div style="background: rgba(0,0,0,0.4); margin: 10%; padding: 3%; border-radius: 1%;">
+      
+          <div>
+            <h4>
+              <a href="/company_detail/" class="smoothScroll" style="color: wheat;"
+                >Company Details</a
+              >
+            </h4>
+            <h4>
+              <a href="/user_detail/" class="smoothScroll" style="color: wheat;">User Details</a>
+            </h4>  
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+    <!-- HOME -->
+    
+    <script src="{% static 'jquery.js' %}"></script>
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    <script src="{% static 'jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'wow.min.js' %}"></script>
+    <script src="{% static 'owl.carousel.min.js' %}"></script>
+    <script src="{% static 'jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'smoothscroll.js' %}"></script>
+    <script src="{% static 'custom.js' %}"></script>
+  </body>
+</html>
